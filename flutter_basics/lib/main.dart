@@ -309,17 +309,47 @@ class _MyHomePageState extends State<MyHomePage> {
       //     ),
       //   ],
       // ),
-      body: ListView.separated(
-        itemBuilder: (context, index) {
-          return Text(
-            randomNames[index],
-            style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
-          );
-        },
-        itemCount: randomNames.length,
-        separatorBuilder: (context, index) {
-          return Divider(height: 100, thickness: 2);
-        },
+
+      //listveiw seperated
+      // body: ListView.separated(
+      //   itemBuilder: (context, index) {
+      //     return Text(
+      //       randomNames[index],
+      //       style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+      //     );
+      //   },
+      //   itemCount: randomNames.length,
+      //   separatorBuilder: (context, index) {
+      //     return Divider(height: 100, thickness: 2);
+      //   },
+      // ),
+
+      //container decoration
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.blue.shade50,
+        child: Center(
+          child: Container(
+            width: 150,
+            height: 150,
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 249, 247, 249),
+              // borderRadius: BorderRadius.circular(20),
+              border: Border.all(width: 4, color: Colors.amber),
+
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 8,
+                  spreadRadius: 20,
+                  color: const Color.fromARGB(255, 250, 199, 131),
+                ),
+              ],
+
+              shape: BoxShape.circle,
+            ),
+          ),
+        ),
       ),
     );
   }
