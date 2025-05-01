@@ -85,37 +85,81 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: SizedBox(
-        width: 200,
-        height: 300,
 
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Text('A'),
-                Text('B'),
-                Text('C'),
-                Text('D'),
-                Text('E'),
-                ElevatedButton(onPressed: () {}, child: Text('Click')),
-              ],
-            ),
+      // body: SizedBox(
+      //   width: 200,
+      //   height: 300,
 
-            Column(
-              children: [
-                Text('A'),
-                Text('B'),
-                Text('C'),
-                Text('D'),
-                Text('E'),
-                ElevatedButton(onPressed: () {}, child: Text('Click')),
-              ],
+      //   child: Column(
+      //     mainAxisAlignment: MainAxisAlignment.center,
+      //     crossAxisAlignment: CrossAxisAlignment.center,
+      //     children: [
+      //       Row(
+      //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //         children: [
+      //           Text('A'),
+      //           Text('B'),
+      //           Text('C'),
+      //           Text('D'),
+      //           Text('E'),
+      //           ElevatedButton(onPressed: () {}, child: Text('Click')),
+      //         ],
+      //       ),
+
+      //       Column(
+      //         children: [
+      //           Text('A'),
+      //           Text('B'),
+      //           Text('C'),
+      //           Text('D'),
+      //           Text('E'),
+      //           ElevatedButton(onPressed: () {}, child: Text('Click')),
+      //         ],
+      //       ),
+      //     ],
+      //   ),
+      // ),
+
+      //boutton features
+      // body: Container(
+      //   child: ElevatedButton(
+      //     child: Text('Click Me'),
+      //     onPressed: () {
+      //       print("Clicked on button");
+      //     },
+      //   ),
+      // ),
+      body: Center(
+        child: InkWell(
+          onTap: () {
+            print('Tapped on Container');
+          },
+
+          onLongPress: () {
+            print('Longpressed on container');
+          },
+
+          onDoubleTap: () {
+            print("Double Tapped on Container");
+          },
+
+          child: Container(
+            width: 200,
+            height: 200,
+            color: Colors.amber,
+
+            child: Center(
+              child: InkWell(
+                onTap: () {
+                  print('Text Widget Tapped');
+                },
+                child: Text(
+                  "Click Text here",
+                  style: TextStyle(fontSize: 21, fontWeight: FontWeight.w700),
+                ),
+              ),
             ),
-          ],
+          ),
         ),
       ),
     );
