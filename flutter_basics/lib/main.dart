@@ -58,31 +58,28 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
       _counter++;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+    var randomNames = [
+      'Raman',
+      'Raja',
+      'Rajesh',
+      'Raj',
+      'Raja',
+      'Rajesh',
+      'Raj',
+      'Raja',
+      'Rajesh',
+      'Raj',
+    ];
     return Scaffold(
       appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
+
         title: Text(widget.title),
       ),
 
@@ -166,123 +163,163 @@ class _MyHomePageState extends State<MyHomePage> {
       // ),
 
       // scrollview widget
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(bottom: 11),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 200,
-                        height: 200,
-                        color: const Color.fromARGB(255, 195, 74, 96),
-                        margin: EdgeInsets.only(right: 11),
-                      ),
-                      Container(
-                        width: 200,
-                        height: 200,
-                        color: const Color.fromARGB(255, 74, 195, 153),
-                        margin: EdgeInsets.only(right: 11),
-                      ),
-                      Container(
-                        width: 200,
-                        height: 200,
-                        color: const Color.fromARGB(255, 159, 195, 74),
-                        margin: EdgeInsets.only(right: 11),
-                      ),
+      // body: Padding(
+      //   padding: const EdgeInsets.all(8.0),
+      //   child: SingleChildScrollView(
+      //     child: Column(
+      //       children: [
+      //         Padding(
+      //           padding: EdgeInsets.only(bottom: 11),
+      //           child: SingleChildScrollView(
+      //             scrollDirection: Axis.horizontal,
+      //             child: Row(
+      //               children: [
+      //                 Container(
+      //                   width: 200,
+      //                   height: 200,
+      //                   color: const Color.fromARGB(255, 195, 74, 96),
+      //                   margin: EdgeInsets.only(right: 11),
+      //                 ),
+      //                 Container(
+      //                   width: 200,
+      //                   height: 200,
+      //                   color: const Color.fromARGB(255, 74, 195, 153),
+      //                   margin: EdgeInsets.only(right: 11),
+      //                 ),
+      //                 Container(
+      //                   width: 200,
+      //                   height: 200,
+      //                   color: const Color.fromARGB(255, 159, 195, 74),
+      //                   margin: EdgeInsets.only(right: 11),
+      //                 ),
 
-                      Container(
-                        width: 200,
-                        height: 200,
-                        color: const Color.fromARGB(255, 220, 220, 220),
-                        margin: EdgeInsets.only(bottom: 11),
-                      ),
-                      Container(
-                        width: 200,
-                        height: 200,
-                        color: const Color.fromARGB(255, 87, 171, 235),
-                        margin: EdgeInsets.only(bottom: 11),
-                      ),
-                      Container(
-                        width: 200,
-                        height: 200,
-                        color: Colors.lightGreen,
-                        margin: EdgeInsets.only(bottom: 11),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+      //                 Container(
+      //                   width: 200,
+      //                   height: 200,
+      //                   color: const Color.fromARGB(255, 220, 220, 220),
+      //                   margin: EdgeInsets.only(bottom: 11),
+      //                 ),
+      //                 Container(
+      //                   width: 200,
+      //                   height: 200,
+      //                   color: const Color.fromARGB(255, 87, 171, 235),
+      //                   margin: EdgeInsets.only(bottom: 11),
+      //                 ),
+      //                 Container(
+      //                   width: 200,
+      //                   height: 200,
+      //                   color: Colors.lightGreen,
+      //                   margin: EdgeInsets.only(bottom: 11),
+      //                 ),
+      //               ],
+      //             ),
+      //           ),
+      //         ),
 
-              Container(
-                width: 200,
-                height: 200,
-                color: const Color.fromARGB(255, 74, 78, 195),
-                margin: EdgeInsets.only(bottom: 11),
-              ),
-              Container(
-                width: 200,
-                height: 200,
-                color: const Color.fromARGB(255, 87, 171, 235),
-                margin: EdgeInsets.only(bottom: 11),
-              ),
-              Container(
-                width: 200,
-                height: 200,
-                color: Colors.lightGreen,
-                margin: EdgeInsets.only(bottom: 11),
-              ),
-              Container(
-                width: 200,
-                height: 200,
-                color: Colors.lightGreen,
-                margin: EdgeInsets.only(bottom: 11),
-              ),
-              Container(
-                width: 200,
-                height: 200,
-                color: Colors.lightGreen,
-                margin: EdgeInsets.only(bottom: 11),
-              ),
+      //         Container(
+      //           width: 200,
+      //           height: 200,
+      //           color: const Color.fromARGB(255, 74, 78, 195),
+      //           margin: EdgeInsets.only(bottom: 11),
+      //         ),
+      //         Container(
+      //           width: 200,
+      //           height: 200,
+      //           color: const Color.fromARGB(255, 87, 171, 235),
+      //           margin: EdgeInsets.only(bottom: 11),
+      //         ),
+      //         Container(
+      //           width: 200,
+      //           height: 200,
+      //           color: Colors.lightGreen,
+      //           margin: EdgeInsets.only(bottom: 11),
+      //         ),
+      //         Container(
+      //           width: 200,
+      //           height: 200,
+      //           color: Colors.lightGreen,
+      //           margin: EdgeInsets.only(bottom: 11),
+      //         ),
+      //         Container(
+      //           width: 200,
+      //           height: 200,
+      //           color: Colors.lightGreen,
+      //           margin: EdgeInsets.only(bottom: 11),
+      //         ),
 
-              Container(
-                width: 200,
-                height: 200,
-                color: Colors.lightGreen,
-                margin: EdgeInsets.only(bottom: 11),
-              ),
-              Container(
-                width: 200,
-                height: 200,
-                color: Colors.lightGreen,
-                margin: EdgeInsets.only(bottom: 11),
-              ),
-              Container(
-                width: 200,
-                height: 200,
-                color: Colors.lightGreen,
-                margin: EdgeInsets.only(bottom: 11),
-              ),
-              Container(
-                width: 200,
-                height: 200,
-                color: const Color.fromARGB(255, 251, 247, 40),
-                margin: EdgeInsets.only(bottom: 11),
-              ),
-              Container(
-                width: 200,
-                height: 200,
-                color: const Color.fromARGB(255, 195, 74, 74),
-                margin: EdgeInsets.only(bottom: 11),
-              ),
-            ],
-          ),
-        ),
+      //         Container(
+      //           width: 200,
+      //           height: 200,
+      //           color: Colors.lightGreen,
+      //           margin: EdgeInsets.only(bottom: 11),
+      //         ),
+      //         Container(
+      //           width: 200,
+      //           height: 200,
+      //           color: Colors.lightGreen,
+      //           margin: EdgeInsets.only(bottom: 11),
+      //         ),
+      //         Container(
+      //           width: 200,
+      //           height: 200,
+      //           color: Colors.lightGreen,
+      //           margin: EdgeInsets.only(bottom: 11),
+      //         ),
+      //         Container(
+      //           width: 200,
+      //           height: 200,
+      //           color: const Color.fromARGB(255, 251, 247, 40),
+      //           margin: EdgeInsets.only(bottom: 11),
+      //         ),
+      //         Container(
+      //           width: 200,
+      //           height: 200,
+      //           color: const Color.fromARGB(255, 195, 74, 74),
+      //           margin: EdgeInsets.only(bottom: 11),
+      //         ),
+      //       ],
+      //     ),
+      //   ),
+      // ),
+
+      // body: ListView(
+      //   scrollDirection: Axis.horizontal,
+
+      //   // reverse: true,
+      //   children: [
+      //     Text(
+      //       'One',
+      //       style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
+      //     ),
+      //     Text(
+      //       'two',
+      //       style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
+      //     ),
+      //     Text(
+      //       'three',
+      //       style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
+      //     ),
+      //     Text(
+      //       'four',
+      //       style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
+      //     ),
+      //     Text(
+      //       'five',
+      //       style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),
+      //     ),
+      //   ],
+      // ),
+      body: ListView.separated(
+        itemBuilder: (context, index) {
+          return Text(
+            randomNames[index],
+            style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+          );
+        },
+        itemCount: randomNames.length,
+        separatorBuilder: (context, index) {
+          return Divider(height: 100, thickness: 2);
+        },
       ),
     );
   }
