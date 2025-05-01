@@ -85,18 +85,36 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Container(
+      body: SizedBox(
         width: 200,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          // crossAxisAlignment: ,
+        height: 300,
+
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('A'),
-            Text('B'),
-            Text('C'),
-            Text('D'),
-            Text('E'),
-            ElevatedButton(onPressed: () {}, child: Text('Click')),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text('A'),
+                Text('B'),
+                Text('C'),
+                Text('D'),
+                Text('E'),
+                ElevatedButton(onPressed: () {}, child: Text('Click')),
+              ],
+            ),
+
+            Column(
+              children: [
+                Text('A'),
+                Text('B'),
+                Text('C'),
+                Text('D'),
+                Text('E'),
+                ElevatedButton(onPressed: () {}, child: Text('Click')),
+              ],
+            ),
           ],
         ),
       ),
