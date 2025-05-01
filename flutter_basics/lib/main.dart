@@ -129,36 +129,158 @@ class _MyHomePageState extends State<MyHomePage> {
       //     },
       //   ),
       // ),
-      body: Center(
-        child: InkWell(
-          onTap: () {
-            print('Tapped on Container');
-          },
 
-          onLongPress: () {
-            print('Longpressed on container');
-          },
+      //inkwell widget
+      // body: Center(
+      //   child: InkWell(
+      //     onTap: () {
+      //       print('Tapped on Container');
+      //     },
 
-          onDoubleTap: () {
-            print("Double Tapped on Container");
-          },
+      //     onLongPress: () {
+      //       print('Longpressed on container');
+      //     },
 
-          child: Container(
-            width: 200,
-            height: 200,
-            color: Colors.amber,
+      //     onDoubleTap: () {
+      //       print("Double Tapped on Container");
+      //     },
 
-            child: Center(
-              child: InkWell(
-                onTap: () {
-                  print('Text Widget Tapped');
-                },
-                child: Text(
-                  "Click Text here",
-                  style: TextStyle(fontSize: 21, fontWeight: FontWeight.w700),
+      //     child: Container(
+      //       width: 200,
+      //       height: 200,
+      //       color: Colors.amber,
+
+      //       child: Center(
+      //         child: InkWell(
+      //           onTap: () {
+      //             print('Text Widget Tapped');
+      //           },
+      //           child: Text(
+      //             "Click Text here",
+      //             style: TextStyle(fontSize: 21, fontWeight: FontWeight.w700),
+      //           ),
+      //         ),
+      //       ),
+      //     ),
+      //   ),
+      // ),
+
+      // scrollview widget
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(bottom: 11),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 200,
+                        height: 200,
+                        color: const Color.fromARGB(255, 195, 74, 96),
+                        margin: EdgeInsets.only(right: 11),
+                      ),
+                      Container(
+                        width: 200,
+                        height: 200,
+                        color: const Color.fromARGB(255, 74, 195, 153),
+                        margin: EdgeInsets.only(right: 11),
+                      ),
+                      Container(
+                        width: 200,
+                        height: 200,
+                        color: const Color.fromARGB(255, 159, 195, 74),
+                        margin: EdgeInsets.only(right: 11),
+                      ),
+
+                      Container(
+                        width: 200,
+                        height: 200,
+                        color: const Color.fromARGB(255, 220, 220, 220),
+                        margin: EdgeInsets.only(bottom: 11),
+                      ),
+                      Container(
+                        width: 200,
+                        height: 200,
+                        color: const Color.fromARGB(255, 87, 171, 235),
+                        margin: EdgeInsets.only(bottom: 11),
+                      ),
+                      Container(
+                        width: 200,
+                        height: 200,
+                        color: Colors.lightGreen,
+                        margin: EdgeInsets.only(bottom: 11),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
+
+              Container(
+                width: 200,
+                height: 200,
+                color: const Color.fromARGB(255, 74, 78, 195),
+                margin: EdgeInsets.only(bottom: 11),
+              ),
+              Container(
+                width: 200,
+                height: 200,
+                color: const Color.fromARGB(255, 87, 171, 235),
+                margin: EdgeInsets.only(bottom: 11),
+              ),
+              Container(
+                width: 200,
+                height: 200,
+                color: Colors.lightGreen,
+                margin: EdgeInsets.only(bottom: 11),
+              ),
+              Container(
+                width: 200,
+                height: 200,
+                color: Colors.lightGreen,
+                margin: EdgeInsets.only(bottom: 11),
+              ),
+              Container(
+                width: 200,
+                height: 200,
+                color: Colors.lightGreen,
+                margin: EdgeInsets.only(bottom: 11),
+              ),
+
+              Container(
+                width: 200,
+                height: 200,
+                color: Colors.lightGreen,
+                margin: EdgeInsets.only(bottom: 11),
+              ),
+              Container(
+                width: 200,
+                height: 200,
+                color: Colors.lightGreen,
+                margin: EdgeInsets.only(bottom: 11),
+              ),
+              Container(
+                width: 200,
+                height: 200,
+                color: Colors.lightGreen,
+                margin: EdgeInsets.only(bottom: 11),
+              ),
+              Container(
+                width: 200,
+                height: 200,
+                color: const Color.fromARGB(255, 251, 247, 40),
+                margin: EdgeInsets.only(bottom: 11),
+              ),
+              Container(
+                width: 200,
+                height: 200,
+                color: const Color.fromARGB(255, 195, 74, 74),
+                margin: EdgeInsets.only(bottom: 11),
+              ),
+            ],
           ),
         ),
       ),
