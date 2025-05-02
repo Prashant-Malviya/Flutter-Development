@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Namaste World🙏',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Basics'),
     );
   }
 }
@@ -325,28 +325,121 @@ class _MyHomePageState extends State<MyHomePage> {
       // ),
 
       //container decoration
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        color: Colors.blue.shade50,
-        child: Center(
-          child: Container(
-            width: 150,
-            height: 150,
-            decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 249, 247, 249),
-              // borderRadius: BorderRadius.circular(20),
-              border: Border.all(width: 4, color: Colors.amber),
+      // body: Container(
+      //   width: double.infinity,
+      //   height: double.infinity,
+      //   color: Colors.blue.shade50,
+      //   child: Center(
+      //     child: Container(
+      //       width: 150,
+      //       height: 150,
+      //       decoration: BoxDecoration(
+      //         color: const Color.fromARGB(255, 249, 247, 249),
+      // borderRadius: BorderRadius.circular(20),
+      //         border: Border.all(width: 4, color: Colors.amber),
 
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 8,
-                  spreadRadius: 20,
-                  color: const Color.fromARGB(255, 250, 199, 131),
+      //         boxShadow: [
+      //           BoxShadow(
+      //             blurRadius: 8,
+      //             spreadRadius: 20,
+      //             color: const Color.fromARGB(255, 250, 199, 131),
+      //           ),
+      //         ],
+
+      //         shape: BoxShape.circle,
+      //       ),
+      //     ),
+      //   ),
+      // ),
+
+      // Expanded Widgets
+      // body: Column(
+      //   children: [
+      //     Expanded(
+      //       flex: 10,
+      //       child: Container(height: 100, color: Colors.orange),
+      //     ),
+
+      //     Expanded(
+      //       flex: 10,
+      //       child: Container(
+      //         // width: 50,
+      //         height: 100,
+      //         color: const Color.fromARGB(255, 238, 241, 239),
+
+      //         child: Container(
+      //           decoration: BoxDecoration(
+      //             shape: BoxShape.circle,
+      //             color: Colors.white,
+      //             border: Border.all(width: 3, color: Colors.black),
+      //           ),
+      //         ),
+      //       ),
+      //     ),
+
+      //     Expanded(
+      //       flex: 10,
+      //       child: Container(
+      // width: 50,
+      //         height: 100,
+      //         color: const Color.fromARGB(255, 96, 183, 62),
+      //       ),
+      //     ),
+
+      //     Expanded(
+      //       flex: 5,
+      //       child: Container(
+      //         width: 50,
+      //         height: 100,
+      //         color: const Color.fromRGBO(119, 55, 248, 1),
+      //       ),
+      //     ),
+
+      //     Expanded(
+      //       flex: 2,
+      //       child: Container(
+      //         width: 50,
+      //         height: 100,
+      //         color: const Color.fromARGB(255, 21, 2, 2),
+      //       ),
+      //     ),
+      //   ],
+      // ),
+
+      //list tile
+      // body: ListView.separated(
+      //   itemBuilder: (context, index) {
+      //     return ListTile(
+      //       leading: Text('${index + 1}'),
+      //       title: Text(randomNames[index]),
+      //       subtitle: Text('Number'),
+      //       trailing: Icon(Icons.add),
+      //     );
+      //   },
+
+      //   itemCount: randomNames.length,
+      //   separatorBuilder: (context, index) {
+      //     return Divider(height: 20, thickness: 1);
+      //   },
+      // ),
+
+      // circle avatar
+      body: Center(
+        child: Container(
+          width: 70,
+          height: 70,
+          child: CircleAvatar(
+            // child: Text('Name', style: TextStyle(color: Colors.deepPurple)),
+            // backgroundImage: AssetImage('assets/images/img1.jpg'),
+            child: Column(
+              children: [
+                Container(
+                  width: 40,
+                  height: 40,
+                  child: Image.asset('assets/images/img1.jpg'),
                 ),
+                Text('John'),
               ],
-
-              shape: BoxShape.circle,
             ),
           ),
         ),
