@@ -69,13 +69,26 @@ class _MyHomePageState extends State<MyHomePage> {
       'Raja',
       'Rajesh',
       'Raj',
-      'Raja',
-      'Rajesh',
-      'Raj',
-      'Raja',
-      'Rajesh',
-      'Raj',
+      'krish',
+      'krishna',
+      'gopal'
+          'mohan',
+      'radhika',
+      'shyam',
     ];
+
+    var randomImages = [
+      'assets/images/img1.jpg',
+      'assets/images/img2.jpg',
+      'assets/images/img3.jpg',
+      'assets/images/img4.jpg',
+      'assets/images/img1.jpg',
+      'assets/images/img2.jpg',
+      'assets/images/img3.jpg',
+      'assets/images/img4.jpg',
+      'assets/images/img2.jpg',
+    ];
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -410,7 +423,10 @@ class _MyHomePageState extends State<MyHomePage> {
       // body: ListView.separated(
       //   itemBuilder: (context, index) {
       //     return ListTile(
-      //       leading: Text('${index + 1}'),
+      //       // leading: Text('${index + 1}'),
+      //       leading: CircleAvatar(
+      //         backgroundImage: AssetImage(randomImages[index]),
+      //       ),
       //       title: Text(randomNames[index]),
       //       subtitle: Text('Number'),
       //       trailing: Icon(Icons.add),
@@ -424,25 +440,29 @@ class _MyHomePageState extends State<MyHomePage> {
       // ),
 
       // circle avatar
-      body: Center(
-        child: Container(
-          width: 70,
-          height: 70,
-          child: CircleAvatar(
-            // child: Text('Name', style: TextStyle(color: Colors.deepPurple)),
-            // backgroundImage: AssetImage('assets/images/img1.jpg'),
-            child: Column(
-              children: [
-                Container(
-                  width: 40,
-                  height: 40,
-                  child: Image.asset('assets/images/img1.jpg'),
-                ),
-                Text('John'),
-              ],
-            ),
-          ),
-        ),
+      // body: Center(
+      //   child: Container(
+      //     width: 70,
+      //     height: 70,
+      //     child: CircleAvatar(
+      // child: Text('Name', style: TextStyle(color: Colors.deepPurple)),
+      // backgroundImage: AssetImage('assets/images/img1.jpg'),
+      //       child: Column(
+      //         children: [
+      //           Container(
+      //             width: 40,
+      //             height: 40,
+      //             child: Image.asset('assets/images/img1.jpg'),
+      //           ),
+      //           Text('John'),
+      //         ],
+      //       ),
+      //     ),
+      //   ),
+      // ),
+      body: Text(
+        'Namaste Bharat🙏🙏',
+        style: TextStyle(fontFamily: 'RegularFont'),
       ),
     );
   }
