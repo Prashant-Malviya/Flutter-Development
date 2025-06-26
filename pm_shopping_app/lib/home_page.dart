@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pm_shopping_app/global_variables.dart';
 import 'package:pm_shopping_app/product_card.dart';
+import 'package:pm_shopping_app/product_details_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,6 +14,8 @@ class _HomePageState extends State<HomePage> {
   final List<String> filters = const ['All', 'Addidas', 'Nike', 'Bata'];
 
   late String selectedFilter;
+
+  int currentPage = 1;
 
   // init state is the first thing which is called before build function
 
@@ -103,20 +106,41 @@ class _HomePageState extends State<HomePage> {
                 itemBuilder: (context, index) {
                   final product = products[index];
 
-                  return ProductCard(
-                    title: product['title'] as String,
-                    price: product['price'] as double,
-                    image: product['imageUrl'] as String,
-                    backgroundColor:
-                        index.isEven
-                            ? const Color.fromRGBO(216, 240, 251, 1)
-                            : const Color.fromRGBO(245, 247, 249, 1),
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return ProductDetailsPage(product: product);
+                          },
+                        ),
+                      );
+                    },
+
+                    child: ProductCard(
+                      title: product['title'] as String,
+                      price: product['price'] as double,
+                      image: product['imageUrl'] as String,
+                      backgroundColor:
+                          index.isEven
+                              ? const Color.fromRGBO(216, 240, 251, 1)
+                              : const Color.fromRGBO(245, 247, 249, 1),
+                    ),
                   );
                 },
               ),
             ),
           ],
         ),
+      ),
+
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: currentPage,
+
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: ''),
+        ],
       ),
     );
   }
