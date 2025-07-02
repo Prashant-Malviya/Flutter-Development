@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pm_shopping_app/global_variables.dart';
+import 'package:pm_shopping_app/CartProvider.dart';
 import 'package:provider/provider.dart';
 
 class CartPage extends StatelessWidget {
@@ -7,7 +7,7 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(Provider.of<String>(context));
+    final cart = Provider.of<CartProvider>(context).cart;
 
     return Scaffold(
       appBar: AppBar(title: const Text('Cart')),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pm_shopping_app/CartProvider.dart';
 import 'package:pm_shopping_app/home_page.dart';
 import 'package:provider/provider.dart';
 
@@ -11,8 +12,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Provider(
-      create: (context) => 'Hellow World',
+    return ChangeNotifierProvider(
+      create: (context) => CartProvider(),
       child: MaterialApp(
         title: 'Shopping App',
         theme: ThemeData(
